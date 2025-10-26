@@ -3,7 +3,7 @@
   base = "frontend"
   
   # Directory that contains the deploy-ready files
-  publish = "frontend"
+  publish = "."
   
   # Build command (empty for static site)
   command = ""
