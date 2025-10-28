@@ -20,10 +20,10 @@ import {
 // ============================================
 const ADMIN_EMAILS = [
     'khambhayata25100@iiitnr.edu.in',
-    'admin2@iiitnr.edu.in',
-    'admin3@iiitnr.edu.in',
-    'admin4@iiitnr.edu.in',
-    'admin5@iiitnr.edu.in'
+    'kokate25100@iiitnr.edu.in',
+    'aanya25100@iiitnr.edu.in',
+    'priyanshu25100@iiitnr.edu.in',
+    'yami25100@iiitnr.edu.in'
 ];
 
 // Helper function to check if user is admin
@@ -43,126 +43,204 @@ let isAuthMode = 'login'; // 'login' or 'register'
 // ============================================
 // Sample Gallery Data (Replace with Firebase data)
 // ============================================
+// ============================================
+// Sample Gallery Data (Replace with Firebase data)
+// ============================================
 const sampleGalleryData = [
-    {
-        id: 1,
-        url: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800',
-        photographer: 'Rahul Sharma',
-        category: 'portraits',
-        caption: 'Portrait session at sunset'
-    },
+
     {
         id: 2,
-        url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-        photographer: 'Priya Singh',
-        category: 'landscape',
-        caption: 'Mountain landscape at dawn'
+        url: 'assets/images/aarambh/dummy2.jpg',
+        photographer: 'Rudra',
+        category: 'aarambh',
+        caption: 'AARAMBH 8.0'
     },
     {
         id: 3,
-        url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800',
-        photographer: 'Amit Kumar',
-        category: 'campus',
-        caption: 'Campus architecture'
+        url: 'assets/images/aarambh/dummy3.jpg',
+        photographer: 'Rudra',
+        category: 'aarambh',
+        caption: 'AARAMBH 8.0'
     },
     {
         id: 4,
-        url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800',
-        photographer: 'Neha Verma',
-        category: 'events',
-        caption: 'Annual photography exhibition'
-    },
-    {
+        url: 'assets/images/aarambh/dummy4.jpg',
+        photographer: 'Rudra',
+        category: 'aarambh',
+        caption: 'AARAMBH 8.0'
+    },{
         id: 5,
-        url: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800',
-        photographer: 'Vikram Patel',
-        category: 'portraits',
-        caption: 'Studio portrait session'
+        url: 'assets/images/aarambh/dummy5.jpg',
+        photographer: 'Rudra',
+        category: 'aarambh',
+        caption: 'AARAMBH 8.0'
     },
     {
         id: 6,
-        url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-        photographer: 'Anita Desai',
-        category: 'landscape',
-        caption: 'Nature photography workshop'
-    },
-    {
+        url: 'assets/images/aarambh/dummy6.jpg',
+        photographer: 'Rudra',
+        category: 'aarambh',
+        caption: 'AARAMBH 8.0'
+    },{
         id: 7,
-        url: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800',
-        photographer: 'Rohan Gupta',
-        category: 'campus',
-        caption: 'Campus life documentation'
+        url: 'assets/images/aarambh/dummy7.jpg',
+        photographer: 'Rudra',
+        category: 'aarambh',
+        caption: 'AARAMBH 8.0'
     },
     {
-        id: 8,
-        url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800',
-        photographer: 'Sneha Reddy',
-        category: 'events',
-        caption: 'Cultural fest moments'
+        id: 1,
+        url: 'assets/images/garba/dummy1.jpg',
+        photographer: 'Onkar',
+        category: 'garba',
+        caption: 'GARBA NIGHT'
+    },
+    {
+        id: 2,
+        url: 'assets/images/garba/dummy2.jpg',
+        photographer: 'Onkar',
+        category: 'garba',
+        caption: 'GARBA NIGHT'
+    },
+    {
+        id: 3,
+        url: 'assets/images/garba/dummy3.jpg',
+        photographer: 'Onkar',
+        category: 'garba',
+        caption: 'GARBA NIGHT'
+    },
+    {
+        id: 4,
+        url: 'assets/images/garba/dummy4.jpg',
+        photographer: 'Onkar',
+        category: 'garba',
+        caption: 'GARBA NIGHT'
+    },
+    {
+        id: 5,
+        url: 'assets/images/garba/dummy5.jpg',
+        photographer: 'Onkar',
+        category: 'garba',
+        caption: 'GARBA NIGHT'
+    },
+    {
+        id: 6,
+        url: 'assets/images/garba/dummy6.jpg',
+        photographer: 'Onkar',
+        category: 'garba',
+        caption: 'GARBA NIGHT'
+    },
+    {
+        id: 1,
+        url: 'assets/images/ganesh/dummy1.jpeg',
+        photographer: 'Aanya',
+        category: 'ganesh',
+        caption: 'GANESH UTSAV'
+    },
+    {
+        id: 2,
+        url: 'assets/images/ganesh/dummy2.jpeg',
+        photographer: 'Aanya',
+        category: 'ganesh',
+        caption: 'GANESH UTSAV'
+    },
+    {
+        id: 3,
+        url: 'assets/images/ganesh/dummy3.jpeg',
+        photographer: 'Aanya',
+        category: 'ganesh',
+        caption: 'GANESH UTSAV'
+    },
+    {
+        id: 4,
+        url: 'assets/images/ganesh/dummy4.jpeg',
+        photographer: 'Aanya',
+        category: 'ganesh',
+        caption: 'GANESH UTSAV'
+    },
+    {
+        id: 5,
+        url: 'assets/images/ganesh/dummy5.jpeg',
+        photographer: 'Aanya',
+        category: 'ganesh',
+        caption: 'GANESH UTSAV'
+    },
+    {
+        id: 6,
+        url: 'assets/images/ganesh/dummy6.jpeg',
+        photographer: 'Aanya',
+        category: 'ganesh',
+        caption: 'GANESH UTSAV'
+    },
+    {
+        id: 1,
+        url: 'assets/images/orientation/dummy1.jpg',
+        photographer: 'Yami',
+        category: 'orientation',
+        caption: 'ORIENTATION'
+    },
+    {
+        id: 2,
+        url: 'assets/images/orientation/dummy2.jpg',
+        photographer: 'Yami',
+        category: 'orientation',
+        caption: 'ORIENTATION'
+    },
+    {
+        id: 3,
+        url: 'assets/images/orientation/dummy3.jpg',
+        photographer: 'Yami',
+        category: 'orientation',
+        caption: 'ORIENTATION'
+    },
+    {
+        id: 4,
+        url: 'assets/images/orientation/dummy4.jpg',
+        photographer: 'Yami',
+        category: 'orientation',
+        caption: 'ORIENTATION'
+    },
+    {
+        id: 5,
+        url: 'assets/images/orientation/dummy5.jpg',
+        photographer: 'Yami',
+        category: 'orientation',
+        caption: 'ORIENTATION'
+    },
+    {
+        id: 6,
+        url: 'assets/images/orientation/dummy6.jpg',
+        photographer: 'Yami',
+        category: 'orientation',
+        caption: 'ORIENTATION'
     }
 ];
 
-// Sample Members Data
-const sampleMembersData = [
-    {
-        name: 'Alex Chen',
-        role: 'President',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200'
-    },
-    {
-        name: 'Sarah Johnson',
-        role: 'Photo Editor',
-        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200'
-    },
-    {
-        name: 'Michael Torres',
-        role: 'Videographer',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200'
-    },
-    {
-        name: 'Emily Rodriguez',
-        role: 'Social Media Manager',
-        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200'
-    }
-];
+
 
 // Sample Workshops Data
 const sampleWorkshopsData = [
     {
-        title: 'Introduction to Photography',
-        date: 'Nov 15, 2024',
-        description: 'Learn the basics of camera operation, composition, and lighting.',
-        image: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400'
+        title: 'AIML Hackathon',
+        date: 'Nov 15, 2025',
+        description: 'Hackathon on AI and Machine Learning for beginners and enthusiasts.',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY1uNqxxRNWIgxh3htkYjlvc5y18DG_u731Q&s'
     },
     {
-        title: 'Portrait Photography Masterclass',
-        date: 'Nov 22, 2024',
-        description: 'Master the art of capturing stunning portraits with natural light.',
-        image: 'https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=400'
+        title: 'Technovate',
+        date: 'Nov 22, 2025',
+        description: 'Technovate workshop focusing on innovative tech solutions and projects.',
+        image: 'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-1002140-2747449.jpg&fm=jpg'
     },
     {
-        title: 'Landscape & Nature Photography',
-        date: 'Nov 29, 2024',
-        description: 'Explore techniques for breathtaking landscape and nature shots.',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400'
+        title: 'Blood Donation Camp',
+        date: 'Nov 29, 2025',
+        description: 'Blood donation camp organized in collaboration with local hospitals.',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnJmjP9fSEBLaNd-l07hJEjwF6CCgea-NiVA&s'
     }
 ];
 
-// Sample Events Data
-const sampleEventsData = [
-    {
-        title: 'Spring Festival 2024',
-        date: 'March 15, 2024',
-        description: 'Annual spring photography competition and exhibition.',
-        image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400'
-    },
-    {
-        title: 'Campus Photo Walk',
-        date: 'April 22, 2024',
-        description: 'Exploring hidden gems around our beautiful campus.',
-        image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400'
-    }
-];
+
 
 // ============================================
 // Initialize App
@@ -329,9 +407,7 @@ function setupIntersectionObserver() {
 // ============================================
 function loadInitialData() {
     loadGallery(sampleGalleryData);
-    loadMembers(sampleMembersData);
     loadWorkshops(sampleWorkshopsData);
-    loadEvents(sampleEventsData);
 }
 
 // ============================================
@@ -387,26 +463,7 @@ function navigateImage(direction) {
     updateModalImage();
 }
 
-// ============================================
-// Load Members
-// ============================================
-function loadMembers(members) {
-    const grid = document.getElementById('membersGrid');
-    if (!grid) return;
-    
-    grid.innerHTML = '';
-    
-    members.forEach(member => {
-        const card = document.createElement('div');
-        card.className = 'member-card';
-        card.innerHTML = `
-            <img src="${member.avatar}" alt="${member.name}" class="member-avatar">
-            <h3 class="member-name">${member.name}</h3>
-            <p class="member-role">${member.role}</p>
-        `;
-        grid.appendChild(card);
-    });
-}
+
 
 // ============================================
 // Load Workshops
@@ -432,29 +489,7 @@ function loadWorkshops(workshops) {
     });
 }
 
-// ============================================
-// Load Events
-// ============================================
-function loadEvents(events) {
-    const grid = document.getElementById('eventsGrid');
-    if (!grid) return;
-    
-    grid.innerHTML = '';
-    
-    events.forEach(event => {
-        const card = document.createElement('div');
-        card.className = 'event-card';
-        card.innerHTML = `
-            <img src="${event.image}" alt="${event.title}" class="event-image">
-            <div class="event-content">
-                <h3 class="event-title">${event.title}</h3>
-                <p class="event-date">📅 ${event.date}</p>
-                <p class="event-description">${event.description}</p>
-            </div>
-        `;
-        grid.appendChild(card);
-    });
-}
+
 
 // ============================================
 // Authentication
