@@ -206,7 +206,7 @@
 
     <!-- Image Viewer Modal -->
     <div id="imageModal" class="modal">
-        <button class="modal-close" id="modalClose">&times;</button>
+        <button class="modal-close" id="modalClose"><span class="cross-sign">&times;</span></button>
         <button class="modal-nav modal-prev" id="modalPrev">❮</button>
         <button class="modal-nav modal-next" id="modalNext">❯</button>
         <div class="modal-content">
@@ -221,10 +221,10 @@
     <!-- Auth Modal -->
     <div id="authModal" class="modal">
         <div class="modal-dialog">
-            <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+            <button class="modal-close" onclick="closeAuthModal()"><span class="cross-sign">&times;</span></button>
             <h2>Sign In</h2>
             <p class="auth-notice">⚠️ Only @iiitnr.edu.in emails can sign in</p>
-            <form id="authForm">
+            <form id="authForm"> 
                 <div class="form-group">
                     <input type="email" id="authEmail" placeholder="your.email@iiitnr.edu.in" required>
                 </div>
@@ -240,7 +240,7 @@
     <!-- Admin Dashboard Modal -->
     <div id="adminModal" class="modal">
         <div class="modal-dialog modal-large">
-            <button class="modal-close" onclick="closeAdminModal()">&times;</button>
+            <button class="modal-close" onclick="closeAdminModal()"><span class="cross-sign">&times;</span></button>
             <h2>Admin Dashboard</h2>
             
             <div class="admin-tabs">

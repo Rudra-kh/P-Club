@@ -825,7 +825,6 @@ main {
 
 .modal-close:hover {
     background: var(--primary);
-    transform: rotate(90deg);
 }
 
 .modal-nav {
@@ -1146,6 +1145,16 @@ main {
         height: 40px;
         font-size: 1.5rem;
     }
+    .modal-close .cross-sign {
+    display: block;
+    transition: color 0.2s;
+    transform: rotate(0deg);
+}
+
+.modal-close:hover .cross-sign {
+    color: #fff;
+    transform: rotate(0deg);
+}
 }
 
 @media (max-width: 480px) {
