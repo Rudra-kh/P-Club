@@ -20,10 +20,10 @@ import {
 // ============================================
 const ADMIN_EMAILS = [
     'khambhayata25100@iiitnr.edu.in',
-    'admin2@iiitnr.edu.in',
-    'admin3@iiitnr.edu.in',
-    'admin4@iiitnr.edu.in',
-    'admin5@iiitnr.edu.in'
+    'kokate25100@iiitnr.edu.in',
+    'aanya25100@iiitnr.edu.in',
+    'priyanshu25100@iiitnr.edu.in',
+    'yami25100@iiitnr.edu.in'
 ];
 
 // Helper function to check if user is admin
@@ -41,128 +41,90 @@ let galleryImages = [];
 let isAuthMode = 'login'; // 'login' or 'register'
 
 // ============================================
-// Sample Gallery Data (Replace with Firebase data)
+// Custom Gallery Data - Replace URLs with your own photos
 // ============================================
-const sampleGalleryData = [
+const customGalleryData = [
     {
         id: 1,
-        url: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800',
-        photographer: 'Rahul Sharma',
-        category: 'portraits',
-        caption: 'Portrait session at sunset'
+        url: 'YOUR_IMAGE_URL_1',
+        category: 'AARAMBH 8.0',
+        caption: 'Your caption here'
     },
     {
         id: 2,
-        url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-        photographer: 'Priya Singh',
-        category: 'landscape',
-        caption: 'Mountain landscape at dawn'
+        url: 'YOUR_IMAGE_URL_2',
+        category: 'GANESH UTSAV',
+        caption: 'Your caption here'
     },
     {
         id: 3,
-        url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800',
-        photographer: 'Amit Kumar',
-        category: 'campus',
-        caption: 'Campus architecture'
+        url: 'YOUR_IMAGE_URL_3',
+        category: 'NAVRATRI',
+        caption: 'Your caption here'
     },
     {
         id: 4,
-        url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800',
-        photographer: 'Neha Verma',
-        category: 'events',
-        caption: 'Annual photography exhibition'
+        url: 'YOUR_IMAGE_URL_4',
+        category: 'CLUB ORIENTATION',
+        caption: 'Your caption here'
     },
     {
         id: 5,
-        url: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800',
-        photographer: 'Vikram Patel',
-        category: 'portraits',
-        caption: 'Studio portrait session'
+        url: 'YOUR_IMAGE_URL_5',
+        category: 'AARAMBH 8.0',
+        caption: 'Your caption here'
     },
     {
         id: 6,
-        url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-        photographer: 'Anita Desai',
-        category: 'landscape',
-        caption: 'Nature photography workshop'
+        url: 'YOUR_IMAGE_URL_6',
+        category: 'GANESH UTSAV',
+        caption: 'Your caption here'
     },
     {
         id: 7,
-        url: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800',
-        photographer: 'Rohan Gupta',
-        category: 'campus',
-        caption: 'Campus life documentation'
+        url: 'YOUR_IMAGE_URL_7',
+        category: 'NAVRATRI',
+        caption: 'Your caption here'
     },
     {
         id: 8,
-        url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800',
-        photographer: 'Sneha Reddy',
-        category: 'events',
-        caption: 'Cultural fest moments'
+        url: 'YOUR_IMAGE_URL_8',
+        category: 'CLUB ORIENTATION',
+        caption: 'Your caption here'
     }
 ];
 
-// Sample Members Data
-const sampleMembersData = [
-    {
-        name: 'Alex Chen',
-        role: 'President',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200'
-    },
-    {
-        name: 'Sarah Johnson',
-        role: 'Photo Editor',
-        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200'
-    },
-    {
-        name: 'Michael Torres',
-        role: 'Videographer',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200'
-    },
-    {
-        name: 'Emily Rodriguez',
-        role: 'Social Media Manager',
-        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200'
+// ============================================
+// Dark Mode Functions
+// ============================================
+function initializeDarkMode() {
+    // Check if user has a dark mode preference saved
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        updateDarkModeIcon();
     }
-];
+}
 
-// Sample Workshops Data
-const sampleWorkshopsData = [
-    {
-        title: 'Introduction to Photography',
-        date: 'Nov 15, 2024',
-        description: 'Learn the basics of camera operation, composition, and lighting.',
-        image: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400'
-    },
-    {
-        title: 'Portrait Photography Masterclass',
-        date: 'Nov 22, 2024',
-        description: 'Master the art of capturing stunning portraits with natural light.',
-        image: 'https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=400'
-    },
-    {
-        title: 'Landscape & Nature Photography',
-        date: 'Nov 29, 2024',
-        description: 'Explore techniques for breathtaking landscape and nature shots.',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400'
+window.toggleDarkMode = function() {
+    document.body.classList.toggle('dark-mode');
+    
+    // Save preference
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
     }
-];
+    
+    updateDarkModeIcon();
+};
 
-// Sample Events Data
-const sampleEventsData = [
-    {
-        title: 'Spring Festival 2024',
-        date: 'March 15, 2024',
-        description: 'Annual spring photography competition and exhibition.',
-        image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400'
-    },
-    {
-        title: 'Campus Photo Walk',
-        date: 'April 22, 2024',
-        description: 'Exploring hidden gems around our beautiful campus.',
-        image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400'
+function updateDarkModeIcon() {
+    const icon = document.getElementById('darkModeIcon');
+    if (icon) {
+        icon.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
     }
-];
+}
 
 // ============================================
 // Initialize App
@@ -171,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
     setupEventListeners();
     loadInitialData();
+    initializeDarkMode();
     
     // Setup authentication listener
     onAuthStateChange((user) => {
@@ -328,14 +291,11 @@ function setupIntersectionObserver() {
 // Load Initial Data
 // ============================================
 function loadInitialData() {
-    loadGallery(sampleGalleryData);
-    loadMembers(sampleMembersData);
-    loadWorkshops(sampleWorkshopsData);
-    loadEvents(sampleEventsData);
+    loadGallery(customGalleryData);
 }
 
 // ============================================
-// Gallery Functions
+// Gallery Functions - No Photographer Overlay
 // ============================================
 function loadGallery(images, filter = 'all') {
     galleryImages = images;
@@ -353,10 +313,6 @@ function loadGallery(images, filter = 'all') {
         item.className = 'gallery-item';
         item.innerHTML = `
             <img src="${img.url}" alt="${img.caption}" loading="lazy">
-            <div class="gallery-item-overlay">
-                <p class="gallery-item-photographer">📸 ${img.photographer}</p>
-                <p class="gallery-item-category">${img.category}</p>
-            </div>
         `;
         item.addEventListener('click', () => openImageModal(index, filteredImages));
         grid.appendChild(item);
@@ -364,7 +320,7 @@ function loadGallery(images, filter = 'all') {
 }
 
 function filterGallery(filter) {
-    loadGallery(sampleGalleryData, filter);
+    loadGallery(customGalleryData, filter);
 }
 
 function openImageModal(index, images) {
@@ -378,7 +334,6 @@ function openImageModal(index, images) {
 function updateModalImage() {
     const img = galleryImages[currentImageIndex];
     document.getElementById('modalImage').src = img.url;
-    document.getElementById('modalPhotographer').textContent = `📸 Photographer: ${img.photographer}`;
     document.getElementById('modalCaption').textContent = img.caption;
 }
 
@@ -388,80 +343,14 @@ function navigateImage(direction) {
 }
 
 // ============================================
-// Load Members
-// ============================================
-function loadMembers(members) {
-    const grid = document.getElementById('membersGrid');
-    if (!grid) return;
-    
-    grid.innerHTML = '';
-    
-    members.forEach(member => {
-        const card = document.createElement('div');
-        card.className = 'member-card';
-        card.innerHTML = `
-            <img src="${member.avatar}" alt="${member.name}" class="member-avatar">
-            <h3 class="member-name">${member.name}</h3>
-            <p class="member-role">${member.role}</p>
-        `;
-        grid.appendChild(card);
-    });
-}
-
-// ============================================
-// Load Workshops
-// ============================================
-function loadWorkshops(workshops) {
-    const grid = document.getElementById('workshopsGrid');
-    if (!grid) return;
-    
-    grid.innerHTML = '';
-    
-    workshops.forEach(workshop => {
-        const card = document.createElement('div');
-        card.className = 'workshop-card';
-        card.innerHTML = `
-            <img src="${workshop.image}" alt="${workshop.title}" class="workshop-image">
-            <div class="workshop-content">
-                <h3 class="workshop-title">${workshop.title}</h3>
-                <p class="workshop-date">📅 ${workshop.date}</p>
-                <p class="workshop-description">${workshop.description}</p>
-            </div>
-        `;
-        grid.appendChild(card);
-    });
-}
-
-// ============================================
-// Load Events
-// ============================================
-function loadEvents(events) {
-    const grid = document.getElementById('eventsGrid');
-    if (!grid) return;
-    
-    grid.innerHTML = '';
-    
-    events.forEach(event => {
-        const card = document.createElement('div');
-        card.className = 'event-card';
-        card.innerHTML = `
-            <img src="${event.image}" alt="${event.title}" class="event-image">
-            <div class="event-content">
-                <h3 class="event-title">${event.title}</h3>
-                <p class="event-date">📅 ${event.date}</p>
-                <p class="event-description">${event.description}</p>
-            </div>
-        `;
-        grid.appendChild(card);
-    });
-}
-
-// ============================================
 // Authentication
 // ============================================
 function updateUIForUser(user) {
     const navActions = document.getElementById('navActions');
     if (!navActions) return;
+    
+    // Get existing dark mode button
+    const darkModeBtn = document.getElementById('darkModeToggle');
     
     if (user) {
         // User is logged in - Check if they're an admin
@@ -471,6 +360,9 @@ function updateUIForUser(user) {
         console.log('Is admin:', isAdmin);
         
         navActions.innerHTML = `
+            <button onclick="toggleDarkMode()" class="btn btn-small btn-secondary" id="darkModeToggle">
+                <span id="darkModeIcon">${document.body.classList.contains('dark-mode') ? '☀️' : '🌙'}</span>
+            </button>
             ${isAdmin ? '<button onclick="openAdminDashboard()" class="btn btn-small" style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); color: white;">👑 Admin</button>' : ''}
             <span style="color: var(--text-dark); font-weight: 600;">${user.displayName || user.email.split('@')[0]}</span>
             <button onclick="handleLogout()" class="btn btn-small btn-secondary">Logout</button>
@@ -478,6 +370,9 @@ function updateUIForUser(user) {
     } else {
         // User is not logged in
         navActions.innerHTML = `
+            <button onclick="toggleDarkMode()" class="btn btn-small btn-secondary" id="darkModeToggle">
+                <span id="darkModeIcon">${document.body.classList.contains('dark-mode') ? '☀️' : '🌙'}</span>
+            </button>
             <button onclick="openAuthModal()" class="btn btn-small btn-primary">Sign In</button>
         `;
     }
@@ -791,6 +686,7 @@ function showNotification(message, type = 'info') {
 // ============================================
 // Export functions for global access
 // ============================================
+window.toggleDarkMode = toggleDarkMode;
 window.openAuthModal = openAuthModal;
 window.closeAuthModal = closeAuthModal;
 window.switchToRegister = switchToRegister;
