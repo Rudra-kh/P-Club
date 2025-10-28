@@ -23,15 +23,13 @@
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#gallery" class="nav-link">Gallery</a>
-                    <a href="#application" class="nav-link">Join Us</a>
+                    <a href="#members" class="nav-link">Members</a>
+                    <a href="#workshops" class="nav-link">Workshops</a>
+                    <a href="#events" class="nav-link">Events</a>
                 </div>
 
                 <div class="nav-actions" id="navActions">
-                    <!-- Dark Mode Toggle -->
-                    <button onclick="toggleDarkMode()" class="btn btn-small btn-secondary" id="darkModeToggle">
-                        <span id="darkModeIcon">🌙</span>
-                    </button>
-                    <!-- Auth buttons will be populated by JavaScript -->
+                    <!-- Will be populated by JavaScript based on auth state -->
                 </div>
 
                 <button class="mobile-toggle" id="mobileToggle">
@@ -45,13 +43,8 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section with IIIT NR Background -->
+        <!-- Hero Section -->
         <section id="home" class="section hero-section">
-            <div class="hero-background">
-                <!-- IIIT Naya Raipur Campus Image -->
-                <img src="https://iiitnr.ac.in/sites/default/files/inline-images/IIITNR-Panorama-view.jpg" alt="IIIT Naya Raipur Campus" class="hero-bg-image">
-                <div class="hero-overlay"></div>
-            </div>
             <div class="hero-content">
                 <h1 class="hero-title">Capturing Moments</h1>
                 <p class="hero-subtitle">Creating Memories</p>
@@ -96,10 +89,10 @@
                 <!-- Filter Buttons -->
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="AARAMBH 8.0">AARAMBH 8.0</button>
-                    <button class="filter-btn" data-filter="GANESH UTSAV">GANESH UTSAV</button>
-                    <button class="filter-btn" data-filter="NAVRATRI">NAVRATRI</button>
-                    <button class="filter-btn" data-filter="CLUB ORIENTATION">CLUB ORIENTATION</button>
+                    <button class="filter-btn" data-filter="portraits">Portraits</button>
+                    <button class="filter-btn" data-filter="landscape">Landscape</button>
+                    <button class="filter-btn" data-filter="campus">Campus</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
                 </div>
 
                 <!-- Gallery Grid -->
@@ -109,37 +102,62 @@
             </div>
         </section>
 
-        <!-- Application Section - Full Width -->
-        <section id="application" class="section application-section application-full-width">
-            <div class="application-container">
+        <!-- Members Section -->
+        <section id="members" class="section members-section">
+            <div class="container">
+                <h2 class="section-title">Our Team</h2>
+                <div class="members-grid" id="membersGrid">
+                    <!-- Members will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Workshops Section -->
+        <section id="workshops" class="section workshops-section">
+            <div class="container">
+                <h2 class="section-title">Upcoming Workshops</h2>
+                <div class="workshops-grid" id="workshopsGrid">
+                    <!-- Workshops will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section events-section">
+            <div class="container">
+                <h2 class="section-title">Past Events</h2>
+                <div class="events-grid" id="eventsGrid">
+                    <!-- Events will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Section -->
+        <section id="application" class="section application-section">
+            <div class="container">
                 <h2 class="section-title">Join Us</h2>
-                <p class="application-subtitle">Become a part of IIIT Naya Raipur's Photography Club and explore your creative potential</p>
                 <form id="applicationForm" class="application-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="appName">Full Name *</label>
-                            <input type="text" id="appName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="appEmail">Email *</label>
-                            <input type="email" id="appEmail" required>
-                        </div>
+                    <div class="form-group">
+                        <label for="appName">Full Name *</label>
+                        <input type="text" id="appName" required>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="appPhone">Phone Number</label>
-                            <input type="tel" id="appPhone">
-                        </div>
-                        <div class="form-group">
-                            <label for="appEquipment">Equipment You Own</label>
-                            <input type="text" id="appEquipment" placeholder="DSLR, Smartphone, etc.">
-                        </div>
+                    <div class="form-group">
+                        <label for="appEmail">Email *</label>
+                        <input type="email" id="appEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appPhone">Phone Number</label>
+                        <input type="tel" id="appPhone">
                     </div>
                     <div class="form-group">
                         <label for="appExperience">Photography Experience *</label>
-                        <textarea id="appExperience" rows="5" required placeholder="Tell us about your photography journey..."></textarea>
+                        <textarea id="appExperience" rows="4" required placeholder="Tell us about your photography journey..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-large">Submit Application</button>
+                    <div class="form-group">
+                        <label for="appEquipment">Equipment You Own</label>
+                        <input type="text" id="appEquipment" placeholder="DSLR, Smartphone, etc.">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
                 </form>
             </div>
         </section>
@@ -158,8 +176,8 @@
                     <h3>Quick Links</h3>
                     <a href="#home">Home</a>
                     <a href="#gallery">Gallery</a>
-                    <a href="#application">Join Us</a>
-                    <a href="#about">About</a>
+                    <a href="#members">Members</a>
+                    <a href="#workshops">Workshops</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
@@ -194,6 +212,7 @@
         <div class="modal-content">
             <img id="modalImage" src="" alt="">
             <div class="modal-info">
+                <p class="modal-photographer" id="modalPhotographer"></p>
                 <p class="modal-caption" id="modalCaption"></p>
             </div>
         </div>
