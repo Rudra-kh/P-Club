@@ -22,6 +22,4 @@ A modern, minimalist photography club website with Firebase backend and Netlify 
 
 ## 🚀 Live Demo
 
-**Website**: [https://orapy.netlify.app/](https://orapy.netlify.app/)
-
-## 📁 File Structure
+**Website**: [[https://orapy.netlify.app/](https://superlative-cuchufli-19867d.netlify.app/)]
